@@ -24,7 +24,7 @@ export default function CreatePost() {
 
     const JSONdata = JSON.stringify(data);
 
-    const endpoint = `/next-pwa/api/posts/create`;
+    const endpoint = `/api/posts/create`;
 
     const options = {
       method: "POST",
