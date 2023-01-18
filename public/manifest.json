@@ -4,9 +4,9 @@
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
-    "name": "Next PWA",
-    "short_name": "PWA",
-    "description": "This app is Demo PWA in Next js",
+    "name": "Inx Blogs",
+    "short_name": "iBlogs",
+    "description": "Insonix Blogs",
     "icons": [
         {
             "src": "/icon-192x192.png",
