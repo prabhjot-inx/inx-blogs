@@ -32,7 +32,7 @@ export default function AppNavbar() {
         >
           <Logo />
           <Text b color="inherit">
-            Logo
+            iBlogs
           </Text>
         </Navbar.Brand>
         <Navbar.Content
