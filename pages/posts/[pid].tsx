@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { Button, Spacer, Text, Row } from "@nextui-org/react";
+import ErrorPage from 'next/error'
 import mockPosts from "@/data/mockPosts";
 
 // /posts/123?q=test
@@ -10,7 +11,7 @@ const Post = () => {
   const { pid, q } = router.query;
   const post = mockPosts.find((item:any) => item.id.toString()=== pid )
   if (!post) {
-    return {}
+    return <ErrorPage statusCode={404} />
   }
   return (
     <>
