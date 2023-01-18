@@ -7,8 +7,9 @@ export default function App() {
   return (
     <>
     <Head>
-      <title>Posts</title>
-    </Head>
+        <title>Posts | iBlogs</title>
+        <meta name="description" content='Explore the latest posts from Insonix Blogs' />
+      </Head>
     <Grid.Container gap={2}>
       {mockPosts.map((item:any) => <Post key={item.id} post={item}/>)}
     </Grid.Container>

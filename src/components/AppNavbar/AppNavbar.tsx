@@ -5,16 +5,41 @@ import NextLink from "next/link";
 
 export default function AppNavbar() {
   const collapseItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
+    {
+      label: 'Posts',
+      path: '/posts'
+    },
+    {
+      label: 'Create Posts',
+      path: '/posts/create'
+    },
+    {
+      label: 'About Us',
+      path: '#'
+    },
+    {
+      label: 'Contact Us',
+      path: '#'
+    },
+    {
+      label: 'Help & Feedback',
+      path: '#'
+    },
+    {
+      label: 'Logout',
+      path: '#'
+    },
+
+    // "Profile",
+    // "Dashboard",
+    // "Activity",
+    // "Analytics",
+    // "System",
+    // "Deployments",
+    // "My Settings",
+    // "Team Settings",
+    // "Help & Feedback",
+    // "Log Out",
   ];
 
   return (
@@ -117,7 +142,7 @@ export default function AppNavbar() {
         <Navbar.Collapse>
           {collapseItems.map((item, index) => (
             <Navbar.CollapseItem
-              key={item}
+              key={item.label}
               activeColor="secondary"
               css={{
                 color: index === collapseItems.length - 1 ? "$error" : "",
@@ -126,12 +151,13 @@ export default function AppNavbar() {
             >
               <Link
                 color="inherit"
+                as={NextLink}
                 css={{
                   minWidth: "100%",
                 }}
-                href="#"
+                href={item.path}
               >
-                {item}
+                {item.label}
               </Link>
             </Navbar.CollapseItem>
           ))}

@@ -8,10 +8,15 @@ import {
   Checkbox,
   Container,
 } from '@nextui-org/react';
+import Head from 'next/head';
 
 export default function Login() {
   return (
     <div>
+      <Head>
+        <title>Login | iBlogs</title>
+        <meta name="description" content="Login to Insonix" />
+      </Head>
       <Container
         display="flex"
         alignItems="center"

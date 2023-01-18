@@ -7,6 +7,7 @@ import {
   Grid,
   Textarea,
 } from "@nextui-org/react";
+import Head from "next/head";
 import { useState } from "react";
 
 export default function CreatePost() {
@@ -47,6 +48,10 @@ export default function CreatePost() {
 
   return (
     <Grid.Container justify="center">
+      <Head>
+        <title>Create Post | iBlogs</title>
+        <meta name="description" content='Create new posts for your application' />
+      </Head>
       <Grid sm={8} xl={8} xs={12} md={10}>
         <Card css={{ padding: "$10" }}>
           <Text

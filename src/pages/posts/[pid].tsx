@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button, Spacer, Text, Row } from "@nextui-org/react";
 import ErrorPage from 'next/error'
 import mockPosts from "@/data/mockPosts";
+import Head from "next/head";
 
 // /posts/123?q=test
 // pid = 123, q = test
@@ -15,6 +16,10 @@ const Post = () => {
   }
   return (
     <>
+      <Head>
+        <title>{post.title} | iBlogs</title>
+        <meta name="description" content={post.description.substring(0,8)} />
+      </Head>
       <Text css={{textAlign: 'center'}} h2>{post.title}</Text>
       <Spacer y={1}/>
       <Text>{post.description}</Text>
